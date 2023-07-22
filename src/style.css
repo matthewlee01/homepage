@@ -1,0 +1,70 @@
+:root {
+	--sinopia: #bf4e22ff;
+	--midnight-green: #53917E;
+	--moonstone: #89B1BD;
+	--floral-white: #fff8f0ff;
+	--papaya-whip: #fff2d7ff;
+}
+
+@font-face {
+	font-family: 'Nanum Myeongjo';
+	font-style: normal;
+	font-weight: normal;
+	font-display: swap;
+	src: url('/fonts/nanum-myeongjo/NanumMyeongjo-Regular.ttf');
+}
+
+@font-face {
+	font-family: 'Nanum Myeongjo Bold';
+	font-style: normal;
+	font-weight: bold;
+	font-display: swap;
+	src: url('/fonts/nanum-myeongjo/NanumMyeongjo-Bold.ttf');
+}
+
+@font-face {
+	font-family: 'Nanum Myeongjo ExtraBold';
+	font-style: normal;
+	font-weight: bold;
+	font-display: swap;
+	src: url('/fonts/nanum-myeongjo/NanumMyeongjo-ExtraBold.ttf');
+}
+
+@font-face {
+	font-family: 'Junicode 2';
+	font-style: normal;
+	font-weight: normal;
+	font-display: swap;
+	src: url('/fonts/junicode2/JunicodeTwoBeta-SemiCondensedMediumItalic.otf');
+}
+
+* {
+	box-sizing: border-box;
+	font-family: 'Nanum Myeongjo';
+	color: var(--midnight-green);
+}
+
+body {
+	background-color: var(--floral-white);
+	padding: 1.6rem;
+}
+
+h1, h2, h3, h4, h5 {
+	font-family: 'Junicode 2';
+	margin: 0;
+}
+
+a {
+  text-decoration: underline 0.12em rgba(0, 0, 0, 0.1);
+  text-underline-offset: 0.15em;
+	font-family: inherit;
+	color: var(--sinopia);
+  transition: text-decoration-color 300ms, text-underline-offset 300ms;
+}
+
+a:hover {
+  text-decoration-color: rgba(83, 145, 126, 1);
+  text-underline-offset: 0.2em;
+}
+
+
