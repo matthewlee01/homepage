@@ -26,16 +26,22 @@
 		minutes = (minutes < 10 ? '0' : '') + minutes;
 
 		timeSpan.innerHTML = hours + ':' + minutes + period;
+
+		const toggle = document.querySelector('#themeToggle');
+		const toggleTheme = () => {
+			const dim = document.body.classList.toggle('dark-theme');
+			toggle.innerHTML = dim ? 'dim &#10059;' : 'bright &#10059;';
+		};
+		toggle.addEventListener('click', toggleTheme);
 	});
 </script>
 
 <div class="container">
 	<div class="grid">
-
 		<p class="centered row one"><strong>when</strong></p>
 		<p class="row one indented">
-			it's <span id="time">--:--</span><br />
-			on a <span id="day">-------</span>, and
+			it's <span id="time">--:--</span> on a <span id="themeToggle">bright &#10059;</span><br />
+			<span id="day">-------</span>, and
 		</p>
 
 		<p class="centered row two"><strong>where</strong></p>
@@ -75,8 +81,7 @@
 			& learning/creating continuously.
 		</p>
 
-		<div class="right-column"></div>
-
+		<div class="right-column" />
 	</div>
 </div>
 
@@ -89,7 +94,7 @@
 
 	.grid {
 		display: grid;
-		grid-template-columns: 0.8fr 1fr minmax(0px, 0.6fr);
+		grid-template-columns: minmax(2rem, 2fr) 3fr minmax(2rem, 2fr);
 		width: 100%;
 		gap: 0.4rem;
 	}
@@ -100,31 +105,30 @@
 	}
 
 	.one {
-		animation-delay: 0.8s
+		animation-delay: 0.8s;
 	}
 
 	.two {
-		animation-delay: 1.2s
+		margin-bottom: 1rem;
+		animation-delay: 1.2s;
 	}
 
 	.three {
-		animation-delay: 1.6s
+		animation-delay: 1.6s;
 	}
 
 	.four {
-		animation-delay: 2s
+		animation-delay: 2s;
 	}
 
 	.five {
-		animation-delay: 2.4s
+		animation-delay: 2.4s;
 	}
-	
-	
-	
+
 	h1 {
 		font-size: 4rem;
 		line-height: 4rem;
-		color: var(--sinopia);
+		color: var(--color-highlight);
 	}
 
 	p {
@@ -133,13 +137,14 @@
 
 	strong {
 		font-family: 'Nanum Myeongjo ExtraBold';
-		color: var(--moonstone);
-		opacity: 0.5;
+		color: var(--color-accent);
+		opacity: 0.8;
 	}
 
 	.split-cell {
 		display: flex;
 		margin-top: 12px;
+		width: 100%;
 	}
 
 	.image-wrapper {
@@ -153,6 +158,7 @@
 		height: auto;
 		max-height: 10.5rem;
 		max-width: 100%;
+		margin-left: 0.2rem;
 	}
 
 	.centered {
@@ -161,11 +167,16 @@
 
 	.right-column {
 		grid-column: 3;
-		grid-row: 1 / 5;
+		grid-row: 1 / 6;
 	}
 
 	.indented {
-		margin-left: 12%;
+		margin-left: 20%;
+	}
+
+	#themeToggle {
+		color: var(--color-accent);
+		cursor: pointer;
 	}
 
 	@keyframes fadein {
@@ -176,5 +187,4 @@
 			opacity: 1;
 		}
 	}
-	
 </style>

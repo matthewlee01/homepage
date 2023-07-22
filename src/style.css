@@ -1,9 +1,10 @@
 :root {
-	--sinopia: #bf4e22ff;
+	--burnt-orange: #bf4e22ff;
 	--midnight-green: #53917E;
 	--moonstone: #89B1BD;
 	--floral-white: #fff8f0ff;
 	--papaya-whip: #fff2d7ff;
+	--charcoal: #232323;
 }
 
 @font-face {
@@ -41,12 +42,27 @@
 * {
 	box-sizing: border-box;
 	font-family: 'Nanum Myeongjo';
-	color: var(--midnight-green);
 }
 
 body {
-	background-color: var(--floral-white);
+	--color-bg: var(--floral-white);
+	--color-text: var(--midnight-green);
+	--color-highlight: var(--burnt-orange);
+	--color-accent: var(--moonstone);
+	background-color: var(--color-bg);
+	transition: background-color 0.4s;
 	padding: 1.6rem;
+}
+
+body.dark-theme {
+	--color-bg: var(--charcoal);
+	--color-text: var(--floral-white);
+	--color-highlight: var(--midnight-green);
+	--color-accent: var(--burnt-orange);
+}
+
+body > * {
+	color: var(--color-text);
 }
 
 h1, h2, h3, h4, h5 {
@@ -55,10 +71,10 @@ h1, h2, h3, h4, h5 {
 }
 
 a {
-  text-decoration: underline 0.12em rgba(0, 0, 0, 0.1);
+  text-decoration: underline 0.12em rgba(83, 145, 126, 0.2);
   text-underline-offset: 0.15em;
 	font-family: inherit;
-	color: var(--sinopia);
+	color: var(--burnt-orange);
   transition: text-decoration-color 300ms, text-underline-offset 300ms;
 }
 
