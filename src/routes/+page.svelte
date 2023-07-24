@@ -188,7 +188,7 @@
 	}
 
 	.indented {
-		margin-left: 20%;
+		margin-left: 25%;
 	}
 
 	#themeToggle {
