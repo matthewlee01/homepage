@@ -41,7 +41,6 @@
 
 * {
 	box-sizing: border-box;
-	font-family: 'Nanum Myeongjo';
 }
 
 body {
@@ -49,9 +48,11 @@ body {
 	--color-text: var(--midnight-green);
 	--color-highlight: var(--burnt-orange);
 	--color-accent: var(--moonstone);
+	--color-shadow: #23232380;
 	background-color: var(--color-bg);
 	transition: background-color 0.4s;
 	padding: 1.6rem;
+	font-family: 'Nanum Myeongjo';
 }
 
 body.dark-theme {
@@ -59,6 +60,7 @@ body.dark-theme {
 	--color-text: var(--floral-white);
 	--color-highlight: var(--midnight-green);
 	--color-accent: var(--burnt-orange);
+	--color-shadow: #23232380;
 }
 
 body > * {
@@ -67,7 +69,6 @@ body > * {
 
 h1, h2, h3, h4, h5 {
 	font-family: 'Junicode 2';
-	margin: 0;
 }
 
 a {

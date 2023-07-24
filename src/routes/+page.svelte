@@ -1,6 +1,8 @@
 <script>
 	import { onMount } from 'svelte';
+	import Info from './Info.svelte';
 	const dayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+	let showInfo = false;
 
 	onMount(() => {
 		const timeSpan = document.querySelector('#time');
@@ -10,9 +12,13 @@
 
 		let hours = now.getHours();
 		let stage = 'night';
-		if (hours > 5) stage = 'morning';
+		if (hours > 4) stage = 'morning';
 		if (hours > 12) stage = 'afternoon';
 		if (hours > 17) stage = 'evening';
+
+		if (stage === 'night' || stage ==='evening') {
+			document.body.classList.add('dark-theme');
+		}
 
 		daySpan.innerHTML = dayNames[now.getDay()] + ' ' + stage;
 
@@ -28,9 +34,12 @@
 		timeSpan.innerHTML = hours + ':' + minutes + period;
 
 		const toggle = document.querySelector('#themeToggle');
+		if (document.body.classList.contains('dark-theme')) {
+			toggle.innerHTML = 'dark &#10059;'
+		}
 		const toggleTheme = () => {
 			const dim = document.body.classList.toggle('dark-theme');
-			toggle.innerHTML = dim ? 'dim &#10059;' : 'bright &#10059;';
+			toggle.innerHTML = dim ? 'dark &#10059;' : 'bright &#10059;';
 		};
 		toggle.addEventListener('click', toggleTheme);
 	});
@@ -60,12 +69,12 @@
 		<p class="centered row four"><strong>what</strong></p>
 		<div class="split-cell indented" indented>
 			<div class="row four">
-				<h2><a href="/">writing</a></h2>
-				<h2><a href="/">work</a></h2>
-				<h2><a href="/">credentials</a></h2>
-				<h2><a href="/">opinions</a></h2>
-				<h2><a href="/">thoughts</a></h2>
-				<h2><a href="/">personal info</a></h2>
+				<h2><a href="/blog">writing</a></h2>
+				<h2><a href="/" on:click={() => {showInfo = true}}>info</a></h2>
+				<h2><a href="/portfolio">portfolio</a></h2>
+				<h2><a href="/resume">resume</a></h2>
+				<h2><a href="/thoughts">thoughts</a></h2>
+				<h2><a href="/media">media</a></h2>
 			</div>
 			<div class="image-wrapper row zero">
 				<img src="/images/gingko.png" alt="3 gingko leaves" />
@@ -83,6 +92,10 @@
 
 		<div class="right-column" />
 	</div>
+	{#if showInfo}
+		<Info on:close={() => {showInfo = false;}}/>
+	{/if}
+
 </div>
 
 <style>
@@ -105,30 +118,34 @@
 	}
 
 	.one {
-		animation-delay: 0.8s;
+		animation-delay: 0.6s;
 	}
 
 	.two {
 		margin-bottom: 1rem;
-		animation-delay: 1.2s;
+		animation-delay: 0.8s;
 	}
 
 	.three {
-		animation-delay: 1.6s;
+		animation-delay: 1s;
 	}
 
 	.four {
-		animation-delay: 2s;
+		animation-delay: 1.2s;
 	}
 
 	.five {
-		animation-delay: 2.4s;
+		animation-delay: 1.4s;
 	}
 
 	h1 {
 		font-size: 4rem;
 		line-height: 4rem;
 		color: var(--color-highlight);
+	}
+
+	h1, h2 {
+		margin: 0;
 	}
 
 	p {
@@ -158,7 +175,7 @@
 		height: auto;
 		max-height: 10.5rem;
 		max-width: 100%;
-		margin-left: 0.2rem;
+		margin-left: 0.8rem;
 	}
 
 	.centered {
