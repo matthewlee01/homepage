@@ -151,7 +151,7 @@
 		.tile-slot {
 			width: 100%;
 			height: 30vh;
-			font-size: 0.8rem;
+			font-size: 0.85rem;
 		}
 
 		.tile-slot.br {
@@ -165,7 +165,7 @@
 		transform-origin: 50% 50%;
 		box-shadow: 0px 0px 16px var(--color-shadow);
 		overflow: hidden;
-		font-family: 'Nanum Myeongjo';
+		font-family: 'Nanum Myeongjo Bold';
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -174,7 +174,7 @@
 	.tile-content {
 		opacity: 0;
 		animation: 1s reveal ease forwards;
-		text-shadow: -0.4px -0.4px var(--color-shadow);
+		text-shadow: -0.5px -0.4px black;
 		margin: 1.2rem;
 		gap: 1rem;
 		max-width: 320px;
