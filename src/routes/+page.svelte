@@ -19,6 +19,7 @@
 		if (stage === 'night' || stage ==='evening') {
 			document.body.classList.add('dark-theme');
 		}
+		setTimeout(() => document.body.classList.add('transitional', 3000));
 
 		daySpan.innerHTML = dayNames[now.getDay()] + ' ' + stage;
 

@@ -130,6 +130,7 @@
 		left: 0;
 		transition: 0.5s opacity;
 		opacity: 1;
+		overflow: visible;
 	}
 
 	.invisible {
@@ -143,6 +144,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		overflow: visible;
 	}
 
 	@media only screen and (max-width: 600px) {
@@ -161,8 +163,8 @@
 		width: 100%;
 		height: 100%;
 		transform-origin: 50% 50%;
-		overflow: hidden;
 		box-shadow: 0px 0px 16px var(--color-shadow);
+		overflow: hidden;
 		font-family: 'Nanum Myeongjo';
 		display: flex;
 		align-items: center;
@@ -224,8 +226,8 @@
 	.tr.tile {
 		background-color: var(--midnight-green);
 		height: 5%;
-		animation: 1.1s slidein-tr cubic-bezier(0.22, 0.61, 0.36, 1),
-			0.4s 1.01s unfold-tr ease-in-out forwards;
+		animation: 1s slidein-tr cubic-bezier(0.22, 0.61, 0.36, 1),
+			0.4s 1s unfold-tr ease-in-out forwards;
 		color: var(--papaya-whip);
 	}
 
@@ -258,8 +260,8 @@
 	.bl.tile {
 		background-color: var(--moonstone);
 		height: 5%;
-		animation: 1.2s slidein-bl cubic-bezier(0.22, 0.61, 0.36, 1),
-			0.4s 1.02s unfold-bl ease-in-out forwards;
+		animation: 1s slidein-bl cubic-bezier(0.22, 0.61, 0.36, 1),
+			0.4s 1s unfold-bl ease-in-out forwards;
 		color: var(--burnt-orange);
 	}
 
@@ -293,8 +295,8 @@
 	.br.tile {
 		background-color: var(--burnt-orange);
 		width: 5%;
-		animation: 1.3s slidein-br cubic-bezier(0.22, 0.61, 0.36, 1),
-			0.4s 1.03s unfold-br ease-in-out forwards;
+		animation: 1s slidein-br cubic-bezier(0.22, 0.61, 0.36, 1) forwards,
+			0.4s 1s unfold-br ease-in-out forwards;
 		color: var(--moonstone);
 	}
 

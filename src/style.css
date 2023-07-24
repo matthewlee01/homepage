@@ -50,9 +50,12 @@ body {
 	--color-accent: var(--moonstone);
 	--color-shadow: #23232380;
 	background-color: var(--color-bg);
-	transition: background-color 0.4s;
 	padding: 1.6rem;
 	font-family: 'Nanum Myeongjo';
+}
+
+body.transitional {
+	transition: background-color 0.4s;
 }
 
 body.dark-theme {
