@@ -295,7 +295,7 @@
 	.br.tile {
 		background-color: var(--burnt-orange);
 		width: 5%;
-		animation: 1s slidein-br cubic-bezier(0.22, 0.61, 0.36, 1) forwards,
+		animation: 1s slidein-br cubic-bezier(0.22, 0.61, 0.36, 1),
 			0.4s 1s unfold-br ease-in-out forwards;
 		color: var(--moonstone);
 	}
