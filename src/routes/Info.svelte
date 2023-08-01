@@ -178,6 +178,7 @@
 		margin: 1.2rem;
 		gap: 1rem;
 		max-width: 320px;
+		animation-delay: 0.8s;
 	}
 
 	@keyframes reveal {
@@ -189,16 +190,14 @@
 		}
 	}
 
+
+
 	.tl.tile {
 		background-color: var(--papaya-whip);
 		width: 5%;
-		animation: 1s slidein-tl cubic-bezier(0.22, 0.61, 0.36, 1),
-			0.4s 1s unfold-tl ease-in-out forwards;
+		animation: 0.5s slidein-tl cubic-bezier(0.22, 0.61, 0.36, 1),
+			0.3s 0.5s unfold-tl ease-in-out forwards;
 		color: var(--midnight-green);
-	}
-
-	.tl .tile-content {
-		animation-delay: 1.4s;
 	}
 
 	@keyframes slidein-tl {
@@ -226,13 +225,9 @@
 	.tr.tile {
 		background-color: var(--midnight-green);
 		height: 5%;
-		animation: 1s slidein-tr cubic-bezier(0.22, 0.61, 0.36, 1),
-			0.4s 1s unfold-tr ease-in-out forwards;
+		animation: 0.5s slidein-tr cubic-bezier(0.22, 0.61, 0.36, 1),
+			0.3s 0.5s unfold-tr ease-in-out forwards;
 		color: var(--papaya-whip);
-	}
-
-	.tr .tile-content {
-		animation-delay: 1.5s;
 	}
 
 	@keyframes slidein-tr {
@@ -260,13 +255,12 @@
 	.bl.tile {
 		background-color: var(--moonstone);
 		height: 5%;
-		animation: 1s slidein-bl cubic-bezier(0.22, 0.61, 0.36, 1),
-			0.4s 1s unfold-bl ease-in-out forwards;
+		animation: 0.5s slidein-bl cubic-bezier(0.22, 0.61, 0.36, 1),
+			0.3s 0.5s unfold-bl ease-in-out forwards;
 		color: var(--burnt-orange);
 	}
 
 	.bl .tile-content {
-		animation-delay: 1.6s;
 		width: 100%;
 	}
 
@@ -295,13 +289,9 @@
 	.br.tile {
 		background-color: var(--burnt-orange);
 		width: 5%;
-		animation: 1s slidein-br cubic-bezier(0.22, 0.61, 0.36, 1),
-			0.4s 1s unfold-br ease-in-out forwards;
+		animation: 0.5s slidein-br cubic-bezier(0.22, 0.61, 0.36, 1),
+			0.3s 0.5s unfold-br ease-in-out forwards;
 		color: var(--moonstone);
-	}
-
-	.br .tile-content {
-		animation-delay: 1.7s;
 	}
 
 	@keyframes slidein-br {
@@ -328,5 +318,18 @@
 
 	.bl span {
 		float: right;
+	}
+
+	@media (prefers-reduced-motion) {
+		.tile {
+			animation: none !important;
+			width: 100% !important;
+			height: 100% !important;
+		}
+
+		.tile-content {
+			animation: none !important;
+			opacity: 1 !important;
+		}
 	}
 </style>

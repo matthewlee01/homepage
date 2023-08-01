@@ -19,7 +19,7 @@
 		if (stage === 'night' || stage ==='evening') {
 			document.body.classList.add('dark-theme');
 		}
-		setTimeout(() => document.body.classList.add('transitional', 3000));
+		setTimeout(() => document.body.classList.add('transitional', 5000));
 
 		daySpan.innerHTML = dayNames[now.getDay()] + ' ' + stage;
 
@@ -73,7 +73,6 @@
 				<h2><a href="/blog">writing</a></h2>
 				<h2><a href="/" on:click={() => {showInfo = true}}>info</a></h2>
 				<h2><a href="/portfolio">portfolio</a></h2>
-				<h2><a href="/resume">resume</a></h2>
 				<h2><a href="/thoughts">thoughts</a></h2>
 				<h2><a href="/media">media</a></h2>
 			</div>
@@ -119,24 +118,24 @@
 	}
 
 	.one {
-		animation-delay: 0.6s;
+		animation-delay: 0.4s;
 	}
 
 	.two {
 		margin-bottom: 1rem;
-		animation-delay: 0.8s;
+		animation-delay: 0.5s;
 	}
 
 	.three {
-		animation-delay: 1s;
+		animation-delay: 0.6s;
 	}
 
 	.four {
-		animation-delay: 1.2s;
+		animation-delay: 0.7s;
 	}
 
 	.five {
-		animation-delay: 1.4s;
+		animation-delay: 0.8s;
 	}
 
 	h1 {
