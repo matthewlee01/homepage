@@ -114,6 +114,7 @@
 
 	.row {
 		opacity: 0;
+		animation-iteration-count: 1;
 		animation: fadein 1s ease-in-out forwards;
 	}
 
