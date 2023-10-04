@@ -48,41 +48,41 @@
 
 <div class="container">
 	<div class="grid">
-		<p class="centered row one"><strong>when</strong></p>
-		<p class="row one indented">
+		<p class="row one"><strong>when</strong></p>
+		<p class="row one text-right">
 			it's <span id="time">--:--</span> on a <span id="themeToggle">bright &#10059;</span><br />
-			<span id="day">-------</span>, and
+			<span id="day">------- --------</span>, and
 		</p>
 
-		<p class="centered row two"><strong>where</strong></p>
-		<p class="row two indented">
+		<p class="row two"><strong>where</strong></p>
+		<p class="row two text-right">
 			you've stumbled upon <a href="/">matthewjl.xyz</a>,<br />
 			the personal website belonging to
 		</p>
 
-		<p class="centered row three"><strong>who</strong></p>
-		<div class="row indented">
+		<p class="row three"><strong>who</strong></p>
+		<div class="row text-right">
 			<h1>matthew j lee</h1>
 			<br />
 			<div class="row three">whose online presence is expressed through</div>
 		</div>
 
-		<p class="centered row four"><strong>what</strong></p>
-		<div class="split-cell indented" indented>
-			<div class="row four">
+		<p class="row four"><strong>what</strong></p>
+		<div class="split-cell">
+			<div class="image-wrapper row zero">
+				<img src="/images/gingko.png" alt="3 gingko leaves" />
+			</div>
+			<div class="row four text-right">
 				<h2><a href="/blog">writing</a></h2>
 				<h2><a href="/" on:click={() => {showInfo = true}}>info</a></h2>
 				<h2><a href="/portfolio">portfolio</a></h2>
 				<h2><a href="/thoughts">thoughts</a></h2>
 				<h2><a href="/media">media</a></h2>
 			</div>
-			<div class="image-wrapper row zero">
-				<img src="/images/gingko.png" alt="3 gingko leaves" />
-			</div>
 		</div>
 
-		<p class="centered row five"><strong>why</strong></p>
-		<p class="row five indented">
+		<p class="row five"><strong>why</strong></p>
+		<p class="row five text-right">
 			in the hope of<br />
 			maintaining a personal record,<br />
 			connecting from afar,<br />
@@ -107,14 +107,15 @@
 
 	.grid {
 		display: grid;
-		grid-template-columns: minmax(2rem, 2fr) 3fr minmax(2rem, 2fr);
+		grid-template-columns: min-content 1fr;
 		width: 100%;
-		gap: 0.4rem;
+		gap: 0.2rem;
+		max-width: 600px;
 	}
 
 	.row {
 		opacity: 0;
-		animation-iteration-count: 1;
+		animation-iteration-count: 1 !important;
 		animation: fadein 1s ease-in-out forwards;
 	}
 
@@ -160,27 +161,22 @@
 	}
 
 	.split-cell {
-		display: flex;
 		margin-top: 12px;
-		width: 100%;
+		margin-left: auto;
+		display: flex;
 	}
 
+	.row.four {
+		width: fit-content;
+	}
 	.image-wrapper {
-		max-width: 50%;
-		display: flex;
-		align-items: center;
+		height: 100%;
+		max-height: 10em;
+		padding: 1em;
 	}
 
 	.image-wrapper img {
-		width: auto;
-		height: auto;
-		max-height: 10.5rem;
-		max-width: 100%;
-		margin-left: 0.8rem;
-	}
-
-	.centered {
-		text-align: center;
+		max-height: 100%;
 	}
 
 	.right-column {
@@ -188,8 +184,8 @@
 		grid-row: 1 / 6;
 	}
 
-	.indented {
-		margin-left: 25%;
+	.text-right {
+		text-align: right;
 	}
 
 	#themeToggle {
