@@ -50,7 +50,7 @@ body {
 	--color-accent: var(--moonstone);
 	--color-shadow: #23232380;
 	background-color: var(--color-bg);
-	padding: 1.6rem;
+	padding: 0.8rem;
 	font-family: 'Nanum Myeongjo';
 }
 

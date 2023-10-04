@@ -147,7 +147,7 @@
 	}
 
 	h1, h2 {
-		margin: 0;
+		margin: 0.2rem 0;
 	}
 
 	p {
@@ -170,14 +170,12 @@
 		width: fit-content;
 	}
 	.image-wrapper {
-		height: 100%;
-		max-height: 10em;
-		width: 10.5em;
 		padding: 1em;
 	}
 
 	.image-wrapper img {
-		max-height: 100%;
+		width: 8.8em;
+		height: 8.8em;
 	}
 
 	.right-column {
