@@ -172,6 +172,7 @@
 	.image-wrapper {
 		height: 100%;
 		max-height: 10em;
+		width: 10.5em;
 		padding: 1em;
 	}
 
