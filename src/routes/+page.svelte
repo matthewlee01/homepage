@@ -1,6 +1,6 @@
 <script>
 	import { onMount } from 'svelte';
-	import Info from './info.svelte';
+	import Info from './Info.svelte';
 	const dayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 	let showInfo = false;
 
