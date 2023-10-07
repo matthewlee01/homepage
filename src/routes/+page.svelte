@@ -1,6 +1,6 @@
 <script>
 	import { onMount } from 'svelte';
-	import Info from './Info.svelte';
+	import Info from './info.svelte';
 	const dayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 	let showInfo = false;
 
@@ -73,7 +73,7 @@
 				<img src="/images/gingko.png" alt="3 gingko leaves" />
 			</div>
 			<div class="row four text-right">
-				<h2><a href="/blog">writing</a></h2>
+				<h2><a href="https://fieldnotes.matthewjl.xyz">writing</a></h2>
 				<h2><a href="/" on:click={() => {showInfo = true}}>info</a></h2>
 				<h2><a href="/portfolio">portfolio</a></h2>
 				<h2><a href="/thoughts">thoughts</a></h2>
