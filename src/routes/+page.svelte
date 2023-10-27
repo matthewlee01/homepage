@@ -16,11 +16,6 @@
 		if (hours > 12) stage = 'afternoon';
 		if (hours > 17) stage = 'evening';
 
-		if (stage === 'night' || stage ==='evening') {
-			document.body.classList.add('dark-theme');
-		}
-		setTimeout(() => document.body.classList.add('transitional', 5000));
-
 		daySpan.innerHTML = dayNames[now.getDay()] + ' ' + stage;
 
 		let period = hours >= 12 ? 'p.m.' : 'a.m.';
@@ -41,6 +36,7 @@
 		const toggleTheme = () => {
 			const dim = document.body.classList.toggle('dark-theme');
 			toggle.innerHTML = dim ? 'dark &#10059;' : 'bright &#10059;';
+			localStorage.setItem("theme", dim ? "dark" : "bright");
 		};
 		toggle.addEventListener('click', toggleTheme);
 	});

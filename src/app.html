@@ -30,4 +30,11 @@
 	<body data-sveltekit-preload-data="hover">
 		<div style="display: contents">%sveltekit.body%</div>
 	</body>
+	<script>
+		let h = new Date().getHours();
+		if (localStorage.getItem("theme") == "dark" || 
+				((h < 4 || h > 18) && !localStorage.getItem("theme"))) {
+			document.body.classList.add('dark-theme');
+		}
+	</script>
 </html>
