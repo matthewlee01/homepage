@@ -71,7 +71,7 @@
 			<div class="row four text-right">
 				<h2><a href="https://fieldnotes.matthewjl.xyz">writing</a></h2>
 				<h2><a href="/" on:click={() => {showInfo = true}}>info</a></h2>
-				<h2><a href="/portfolio">portfolio</a></h2>
+				<h2><a href="https://portfolio.matthewjl.xyz">portfolio</a></h2>
 				<h2><a href="/thoughts">thoughts</a></h2>
 				<h2><a href="/media">media</a></h2>
 			</div>

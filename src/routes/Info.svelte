@@ -150,12 +150,16 @@
 	@media only screen and (max-width: 600px) {
 		.tile-slot {
 			width: 100%;
-			height: 30vh;
+			height: 28vh;
 			font-size: 0.85rem;
 		}
 
 		.tile-slot.br {
-			height: 10vh;
+			height: 16vh;
+		}
+
+		.tile.br {
+			padding-bottom: 3.2rem;
 		}
 	}
 
